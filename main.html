@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Lätty</title>
+    <style>
+        body {
+            background-image: url('joo.jpg');
+            background-color: #9994c5; 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact-info {
+            display: none; /* Aluksi piilotetaan yhteystiedot */
+            margin-top: 20px;
+        }
+        #show-contact {
+            background-color: #121612;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tervetuloa Pizzeria Lättyyn!</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Etusivu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Tilaukset</a></li>
+        <li><a id="show-contact">Näytä yhteystiedot</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h2>Tervetuloa herkuttelemaan!</h2>
+    <p>Tutustu laajaan valikoimaamme ja tilaa herkulliset pizzat helposti.</p>
+</section>
+
+<div class="contact-info" id="contact-info">
+    <h2>Yhteystiedot</h2>
+    <p>Osoite: Kaivokatu 8, Helsinki</p>
+    <p>Puhelinnumero: 044 5671932</p>
+    <p>Sähköposti: Lätty@gmail.com</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Pizzeria X</p>
+</footer>
+
+<script>
+    document.getElementById("show-contact").addEventListener("click", function() {
+        var contactInfo = document.getElementById("contact-info");
+        if (contactInfo.style.display === "none") {
+            contactInfo.style.display = "block";
+            document.getElementById("show-contact").innerText = "Piilota yhteystiedot";
+        } else {
+            contactInfo.style.display = "none";
+            document.getElementById("show-contact").innerText = "Näytä yhteystiedot";
+        }
+    });
+</script>
+
+</body>
+</html>
